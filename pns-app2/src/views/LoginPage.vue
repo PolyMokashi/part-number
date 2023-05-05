@@ -375,7 +375,7 @@ export default{
 
     async postdata() {
       await axios
-        .post("http://localhost:8083/api/items7", this.MainFinalString)
+        .post("http://20.55.43.53/api/items7", this.MainFinalString)
         .then((result) => {
           location.reload();
         })
@@ -542,7 +542,7 @@ export default{
     },
     async getdata() {
       axios
-        .get("http://localhost:8083/api/items2")
+        .get("http://20.55.43.53/api/items2")
         .then((result) => {
           this.resultdata = result.data;
         })
@@ -552,7 +552,7 @@ export default{
 
     async admindata() {
       axios
-        .get("http://localhost:8083/api/items5")
+        .get("http://20.55.43.53/api/items5")
         .then((result) => {
           let alldata = result.data;
           this.CardData = result.data;

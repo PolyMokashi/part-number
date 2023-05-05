@@ -169,7 +169,7 @@ export default {
 
       this.SamFormData.FormD = this.samformdata;
       await axios
-        .post("http://localhost:8083/api/items5", samdata)
+        .post("http://20.55.43.53/api/items5", samdata)
         .then((result) => {
           location.reload();
         })
@@ -181,7 +181,7 @@ export default {
     },
     async admindata() {
       axios
-        .get("http://localhost:8083/api/items")
+        .get("http://20.55.43.53/api/items")
         .then((result) => {
           for (let i = 0; i < result.data.length; i++) {
             this.poly[i] = result.data[i].Sdata;
@@ -196,7 +196,7 @@ export default {
 
     async getdata() {
       axios
-        .get("http://localhost:8083/api/items2")
+        .get("http://20.55.43.53/api/items2")
         .then((result) => {
           this.userdataupdate = result.data;
         })
@@ -205,13 +205,13 @@ export default {
 
     async postdata() {
       await axios
-        .post("http://localhost:8083/api/items3", this.PolyData)
+        .post("http://20.55.43.53/api/items3", this.PolyData)
         .then((result) => {})
         .catch((err) => {});
     },
     async realdata() {
       await axios
-        .get("http://localhost:8083/api/items6")
+        .get("http://20.55.43.53/api/items6")
         .then((result) => {
           this.real = result.data;
         })
