@@ -3400,10 +3400,10 @@ export default{
       this.PolyData.Textlength = this.radioarray;
       this.radioarray = [];
       await axios
-        .post("http://20.55.43.53/api/items", this.SamData)
+        .post("http://20.55.43.53:8083/api/items", this.SamData)
         .then((result) => {
           axios
-            .post("http://20.55.43.53/api/items2", this.PolyData)
+            .post("http://20.55.43.53:8083/api/items2", this.PolyData)
             .then((result) => {
               this.getdata();
             })
@@ -3418,7 +3418,7 @@ export default{
       let realtimearray = [];
       realtimearray.push(this.realtime);
       await axios
-        .post("http://20.55.43.53/api/items6", realtimearray)
+        .post("http://20.55.43.53:8083/api/items6", realtimearray)
         .then((result) => {
         })
         .catch((err) => {});
@@ -3426,7 +3426,7 @@ export default{
 
     async getdata() {
       axios
-        .get("http://20.55.43.53/api/items")
+        .get("http://20.55.43.53:8083/api/items")
         .then((result) => {
           let len = result.data.length - 1;
           this.ans = result.data[len].Sdata;

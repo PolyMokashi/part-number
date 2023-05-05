@@ -163,7 +163,7 @@ export default {
     },
     async admindata() {
       axios
-        .get("http://20.55.43.53/api/items5")
+        .get("http://20.55.43.53:8083/api/items5")
         .then((result) => {
           
 
